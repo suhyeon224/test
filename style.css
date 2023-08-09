@@ -1,0 +1,402 @@
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, dd {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+ul, ol {
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: top;
+	border: none;
+}
+
+#wrap{}
+/* TOP */
+.top{
+	z-index: 9999;
+	position: absolute;
+	width:100%;
+	font-size: 1em;
+	/* 하위 폰트, 널찍한 패딩 */
+}
+.top .top_inner{
+	padding-top:20px;
+    margin: 0 auto;
+    max-width: 940px;
+
+	display:flex;
+	justify-content: space-between;
+}
+.top .top_inner .tab{
+	display:none;
+	position: absolute;
+	right: 30px;
+	top: 5px;
+}
+#gnb ul{
+	display: flex;
+}
+#gnb ul li a{
+	display: block;
+	position: relative;
+	margin: 0 20px;
+	line-height: 30px;
+	font-size: 1em;
+	font-weight: 600;
+	color:#fff;
+}
+#gnb ul li.active a{
+	color: rgb(143, 73, 150)
+}
+#gnb ul li.active a::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -15px;
+	width: 100%;
+	height: 2px;
+	background-color:rgb(143, 73, 150)
+}
+#gnb ul li:last-child a{
+	padding-right: 0;
+}
+
+@media only screen and (max-width: 1200px){
+}
+@media only screen and (max-width: 720px){
+	.top{
+		font-size: 0.875em;
+	}
+	.top .top_inner{
+		padding: 0 30px;
+		padding-top: 20px;
+	}
+	.top .top_inner .tab{
+		display: block;
+		padding-top:20px;
+	}
+	#gnb{
+		display: none;
+	}
+}
+@media only screen and (max-width: 420px){
+}
+.slider{
+	position: relative;
+	color:#fff;
+	height:700px;
+}
+.slider .keyText{
+	z-index: 9999;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+.slider .keyText p{
+	font-size: 2.4em;
+}
+.slider .keyText h2{
+	padding-top: 15px;
+	font-size: 3vw;
+	font-weight: 600;
+}
+.slider .keyText a{
+	display: inline-block;
+	margin-top: 40px;
+	padding: 10px 50px;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	color:#fff;
+}
+.slider .keyvisual img{
+	position: absolute;
+	display: block;
+   	width: 100%;
+  	height: 100%;
+   	object-fit: cover;
+	top:0;
+	left:0;
+	z-index: 1;
+}
+
+
+/* PAGE*/
+div[id^=page] .title{
+	text-align:center;
+}
+div[id^=page] .title h3{
+	font-size: 2em;
+	font-weight: 800;
+}
+div[id^=page] .title h4{
+	padding-top:16px;
+	font-size: 0.875em;
+	font-weight: 400;
+	color:#767877;
+}
+div[id^=page] .text h5{
+	font-size:1.2em;
+	font-weight:600;
+	color:#000;
+}
+div[id^=page] .text h6{
+	font-size:0.875em;
+	color:#767877;
+	font-weight:400;
+	line-height:1.8em;
+}
+
+
+/* page1 */
+.business{
+	padding: 80px 0;
+}
+.business .business_inner{
+    margin: 0 auto;
+    max-width: 940px;
+}
+.business_inner .business_opt ul{
+	display:flex;
+	justify-content: space-between;
+	padding-top:80px;
+}
+.business_opt ul li{
+	text-align: center;
+}
+.business_opt ul li p:nth-child(1){}
+.business_opt ul li p:nth-child(1) img{
+	border: 2px solid #613e9a;
+	padding:8px;
+	border-radius: 50%;
+}
+.business_opt ul li p span{
+	font-size:1.2em;
+	font-weight:600;
+	line-height:4.5em;
+	color:#000;
+}
+.business_opt ul li p:nth-child(2){
+	font-size:0.875em;
+	color:#767877;
+	line-height:1.8em;
+}
+
+
+@media only screen and (max-width: 1200px){
+	.slider .keyText h2{
+		font-size: 1.8em;
+	}
+}
+@media only screen and (max-width: 720px){
+	.slider{
+		font-size: 0.875em;
+	}
+	.slider .keyText{
+		left:10%;
+		width:80%;
+		transform: translate(0, -50%);
+	}
+
+}
+
+
+
+/* page2 */
+
+.portfolio{
+	padding: 80px 0;
+	background-color: #f7f7f7;
+}
+.portfolio_inner{
+	margin: 0 auto;
+    max-width: 940px;
+}
+.portfolio_opt{
+	text-align:center;
+	padding-top: 80px;
+}
+.portfolio_opt ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+.portfolio_opt ul li{
+	width:calc((100% - 70px)/3);
+	margin-left:35px;
+	margin-bottom:50px;
+}
+.portfolio_opt ul li:nth-child(3n+1){
+	margin-left:0;
+}
+.portfolio_opt ul li a{
+
+}
+.portfolio_content{
+
+}
+.portfolio_content img{
+	
+}
+.portfolio_opt ul li a .text h5{
+	padding-bottom: 6px;
+}
+.portfolio_opt ul li a div:nth-child(2){
+	background-color: #fff;
+	padding: 16px 0;
+}
+
+
+/* page3*/
+.culture{
+	padding: 80px 0;
+}
+.culture_inner{
+	margin: 0 auto;
+    max-width: 940px;
+}
+.culture_opt{
+	padding-top: 80px;
+}
+.culture_opt ul{
+}
+.culture_opt ul li{
+	position:relative;
+	margin:auto;
+}
+.culture_opt ul li a{}
+.culture_content{
+	margin:0 auto 100px;
+	width: 140px;
+    height: 140px; 
+    border-radius: 50%;
+    overflow: hidden;
+	border:8px solid #eee;
+}
+.profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.culture_opt ul li:nth-child(2n+1) .text{
+	position:absolute;
+	text-align: right;
+	left:0;
+	top:0;
+}
+.culture_opt ul li:nth-child(2n) .text{
+	text-align: left;
+	position:absolute;
+	right:0;
+	top:0;
+}
+.culture_opt ul li .text h5{
+	padding-bottom:16px;
+}
+
+/* page3 */
+.awards{
+	padding: 80px 0;
+}
+.awards .awards_inner{
+	margin: 0 auto;
+    max-width: 840px;
+}
+.awards_opt{
+	text-align:center;
+	padding-top: 80px;
+}
+.awards_opt ul{
+	display:flex;
+	justify-content: space-between;
+}
+.awards_opt ul li{}
+.awards_opt ul li .awards_content{
+	width: 240px;
+    height: 240px; 
+    border-radius: 50%;
+    overflow: hidden;
+}
+.awards_opt ul li .text{}
+.awards_opt ul li .text h5{
+	padding-top:24px;
+	padding-bottom:14px;
+}
+
+/* page5 */
+.signature{
+	padding: 60px 0;
+}
+.signature .signature_inner{
+	margin: 0 auto;
+    max-width: 940px;
+	display:flex;
+	justify-content: space-between;
+}
+.signature .signature_inner p{
+	display:inline-block;
+}
+
+/* contact */
+.contact{
+	padding: 100px 0;
+	background-image: url(images/contact_background.jpg);
+}
+.contact .contact_inner{
+	margin: 0 auto;
+    max-width: 940px;
+}
+.contact .contact_inner .contact_title{
+	text-align:center;
+}
+.contact .contact_inner .contact_title h3{
+	font-size: 2em;
+	font-weight: 800;
+	color:#fff;
+}
+.contact .contact_inner .contact_title h4{
+	padding-top:16px;
+	font-size: 0.875em;
+	font-weight: 400;
+	color:#fff;
+}
+.form{
+	padding:80px 0;
+}
+.text_box{
+	display:flex;
+	justify-content: space-between;
+}
+.form_left{}
+.form_left input{
+	border:0;
+	border-radius: 4px;
+	width:450px;
+	height:50px;
+	margin-bottom:24px;
+}
+.form_left input:last-child{
+	margin-bottom:0;
+}
+.form_right{}
+.form_right textarea{
+	border:0;
+	border-radius: 4px;
+	width:450px;
+	height:204px;
+	padding-top:20px;
+}
+.submit{
+	display:block;
+	margin:auto;
+	height:64px;
+	width:240px;
+}
